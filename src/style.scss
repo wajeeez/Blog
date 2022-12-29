@@ -1,0 +1,216 @@
+$bgcolor: #187076;
+
+.app {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 1024px;
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    // LOGIN PAGE CSSS
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      background-color: $bgcolor;
+
+      h1 {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      form {
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid rgb(8, 0, 246);
+        }
+
+        button {
+          color: white;
+          background-color: rgb(16, 77, 77);
+          border: none;
+          height: 40px;
+        }
+
+        span {
+          font-size: 12px;
+          text-align: center;
+        }
+
+        p {
+          font-size: 12px;
+          text-align: center;
+          color: red;
+        }
+      }
+    }
+
+    // NAVBAR
+
+    .navbar {
+      .container {
+        padding: 10px 0px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+          img {
+            width: 120px;
+          }
+        }
+
+        .links {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          h6 {
+            font-size: 16px;
+            font-weight: 300;
+          }
+
+          span {
+            cursor: pointer;
+          }
+
+          .write {
+            background-color: $bgcolor;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            border: 1px solid white;
+
+            &:hover {
+              color: teal;
+              background-color: white;
+              border: 1px solid teal;
+            }
+
+          }
+
+
+        }
+      }
+    }
+
+
+    //Footer
+    //FOOTER
+
+    footer {
+      margin-top: 100px;
+      padding: 20px;
+      background-color: $bgcolor;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    //HOME
+    .home {
+
+      .posts {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+
+
+        .post {
+          display: flex;
+          gap: 100px;
+
+          
+          &:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+          }
+
+          .img {
+
+            flex: 2;  
+            
+            position: relative;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background-color: $bgcolor;
+              position: absolute;
+              top: 20px;
+              left: -20px;
+              z-index: -1;
+            }
+
+            img {
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+            
+
+            }
+          }
+
+          .content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1 {
+              font-size: 48px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+
+            button {
+              width: max-content;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              background-color: white;
+              border: 1px solid teal;
+              color: teal;
+
+              &:hover {
+                border: 1px solid white;
+                background-color: $bgcolor;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+  }
